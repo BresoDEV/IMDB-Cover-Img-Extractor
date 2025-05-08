@@ -1,0 +1,17 @@
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\bin\Debug\net7.0-windows\Pegar Capa Filmes IMDB.exe
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\bin\Debug\net7.0-windows\Pegar Capa Filmes IMDB.deps.json
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\bin\Debug\net7.0-windows\Pegar Capa Filmes IMDB.runtimeconfig.json
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\bin\Debug\net7.0-windows\Pegar Capa Filmes IMDB.dll
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\bin\Debug\net7.0-windows\Pegar Capa Filmes IMDB.pdb
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.csproj.AssemblyReference.cache
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar_Capa_Filmes_IMDB.Form1.resources
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.csproj.GenerateResource.cache
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.AssemblyInfoInputs.cache
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.AssemblyInfo.cs
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.dll
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\refint\Pegar Capa Filmes IMDB.dll
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.pdb
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\Pegar Capa Filmes IMDB.genruntimeconfig.cache
+C:\Users\eduar\Desktop\Pegar Capa Filmes IMDB\Pegar Capa Filmes IMDB\obj\Debug\net7.0-windows\ref\Pegar Capa Filmes IMDB.dll
