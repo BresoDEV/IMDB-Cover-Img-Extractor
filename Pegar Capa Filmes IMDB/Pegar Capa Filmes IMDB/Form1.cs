@@ -3,6 +3,8 @@ using System;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Text;
 
 namespace Pegar_Capa_Filmes_IMDB
 {
@@ -29,6 +31,12 @@ namespace Pegar_Capa_Filmes_IMDB
             string url = textBox1.Text;
             string html = await GetHtmlAsync(url);
 
+            //--------------------------------------------
+            string tituklo = await GetStringAsync(url);
+            Match dddddddddddd = Regex.Match(html, @"<title>\s*(.+?)\s*</title>", RegexOptions.IgnoreCase);
+
+            //--------------------------------------------
+
             string pattern = @"""([^""]*380w[^""]*)""";
             Match match = Regex.Match(html, pattern);
 
@@ -43,6 +51,8 @@ namespace Pegar_Capa_Filmes_IMDB
                // string passo3 = passo2.Replace("0,380,", "0,0,");
                 textBox2.Text = passo1;
 
+                BaixarIMG(passo1, dddddddddddd.Groups[1].Value);
+
                 textBox2.Visible = true;
                 label1.Visible = false;
             }
@@ -52,6 +62,13 @@ namespace Pegar_Capa_Filmes_IMDB
             }
         }
 
+        static async Task<string> GetStringAsync(string url)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                return await client.GetStringAsync(url);
+            }
+        }
         static async Task<string> GetHtmlAsync(string url)
         {
             using (HttpClient client = new HttpClient())
@@ -59,6 +76,49 @@ namespace Pegar_Capa_Filmes_IMDB
                 return await client.GetStringAsync(url);
             }
         }
+        async Task BaixarIMG(string imageUrl, string nome)
+        {
+           // string localPath = GerarSenha() + ".jpg";
+            string localPath = nome.Replace(" - IMDb", "") + ".jpg";
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
+                    await File.WriteAllBytesAsync(localPath, imageBytes);
+
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "explorer.exe",
+                        Arguments = $"/select,\"{localPath}\"",
+                        UseShellExecute = true
+                    });
+
+                }
+                catch (Exception ex)
+                {
+                    textBox2.Text = $"Erro ao baixar imagem: {ex.Message}";
+                }
+            }
+        }
+
+        public static string GerarSenha(int tamanho = 10)
+        {
+            const string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder senha = new StringBuilder();
+            Random rnd = new Random();
+
+            for (int i = 0; i < tamanho; i++)
+            {
+                int index = rnd.Next(caracteres.Length);
+                senha.Append(caracteres[index]);
+            }
+
+            return senha.ToString();
+        }
+
+
 
     }
 }
