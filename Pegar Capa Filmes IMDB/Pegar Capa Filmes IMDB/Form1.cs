@@ -15,6 +15,11 @@ namespace Pegar_Capa_Filmes_IMDB
             InitializeComponent();
             textBox2.Visible = false;
             label1.Visible = false;
+
+            if (!File.Exists("Links.txt"))
+            {
+                File.Create("Links.txt");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,8 +52,8 @@ namespace Pegar_Capa_Filmes_IMDB
 
 
                 string passo1 = "https" + f[ct - 1].Replace(" 380w", "");
-               // string passo2 = passo1.Replace("562_", "1200_");
-               // string passo3 = passo2.Replace("0,380,", "0,0,");
+                // string passo2 = passo1.Replace("562_", "1200_");
+                // string passo3 = passo2.Replace("0,380,", "0,0,");
                 textBox2.Text = passo1;
 
                 BaixarIMG(passo1, dddddddddddd.Groups[1].Value);
@@ -78,7 +83,7 @@ namespace Pegar_Capa_Filmes_IMDB
         }
         async Task BaixarIMG(string imageUrl, string nome)
         {
-           // string localPath = GerarSenha() + ".jpg";
+            // string localPath = GerarSenha() + ".jpg";
             string localPath = nome.Replace(" - IMDb", "") + ".jpg";
 
             using (HttpClient client = new HttpClient())
@@ -94,7 +99,7 @@ namespace Pegar_Capa_Filmes_IMDB
                         Arguments = $"/select,\"{localPath}\"",
                         UseShellExecute = true
                     });
-
+                    log(nome, imageUrl);
                 }
                 catch (Exception ex)
                 {
@@ -103,19 +108,15 @@ namespace Pegar_Capa_Filmes_IMDB
             }
         }
 
-        public static string GerarSenha(int tamanho = 10)
+        public static void log(string nomefilme, string url)
         {
-            const string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            StringBuilder senha = new StringBuilder();
-            Random rnd = new Random();
+            
+             
+            File.AppendAllText("Links.txt", "\nFilme: " + nomefilme.Replace(" - IMDb", ""));
+            File.AppendAllText("Links.txt", "\nLink: " + url);
+            File.AppendAllText("Links.txt", "\n---------------------------------------------------\n");
+          
 
-            for (int i = 0; i < tamanho; i++)
-            {
-                int index = rnd.Next(caracteres.Length);
-                senha.Append(caracteres[index]);
-            }
-
-            return senha.ToString();
         }
 
 

@@ -55,7 +55,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(12, 38);
+            textBox2.Location = new Point(12, 105);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(374, 23);
             textBox2.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(394, 66);
+            ClientSize = new Size(394, 63);
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
